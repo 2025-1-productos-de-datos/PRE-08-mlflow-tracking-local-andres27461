@@ -42,7 +42,8 @@ def main():
     mlflow_runs_path = os.path.join(working_directory, "my_mlruns")
     if not os.path.exists(mlflow_runs_path):
         os.makedirs(mlflow_runs_path)
-    mlflow.set_tracking_uri("file:" + mlflow_runs_path)
+    mlflow.set_tracking_uri(mlflow_runs_path)
+    ##mlflow.set_tracking_uri("file:" + mlflow_runs_path)
 
     ## Autotracking para sklearn
     mlflow.sklearn.autolog(
